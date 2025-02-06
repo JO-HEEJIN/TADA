@@ -1,27 +1,40 @@
-# replicate.yml
-image: r8.im/replicate/python:3.10  # Replicate에서 제공하는 기본 Python 이미지를 사용
+image: r8.im/replicate/python:3.10
 
 run:
-  command: ["python", "run.py"]
-  gpu: true  # TADA는 GPU 필요
-  memory: 16Gi  # 메모리 요구량 (적절히 조정)
+  command: ["python", "replicate_run.py"]  # 실제로 실행할 스크립트 (예: replicate_run.py)
+  gpu: true
+  memory: 16Gi
 
-# Python 패키지 의존성을 pip로 설치
 python_version: "3.10"
 python_requirements:
   - torch
   - torchvision
   - torchaudio
+  - PyYAML
+  - replicate
+  - numpy
+  - opencv-python
+  - imageio
+  - 'imageio[ffmpeg]'
+  - xatlas
+  - tqdm
+  - scipy
+  - pymeshlab
+  - tensorboardX
+  - rich
+  - torch_ema
+  - dearpygui
   - transformers
-  - pytorch
-  - conda-forge
-  - defaults
-  - python=3.9
-  - pytorch=1.12.1
-  - torchvision=0.13.1
-  - torchaudio=0.12.1
-  - cudatoolkit=11.6
-#  - matplotlib=3.5.2
-  - jupyter=1.0.0
-  - pip
-  
+  - diffusers
+  - accelerate
+  - trimesh
+  - pyrender
+  - easydict
+  - yacs
+  - fvcore
+  - pyopengl==3.1.4
+  - iopath
+  - ninja
+  - mediapipe
+  - timm
+  - git+https://github.com/NVlabs/nvdiffrast.git
