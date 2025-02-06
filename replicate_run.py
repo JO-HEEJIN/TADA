@@ -21,7 +21,7 @@ def main():
     #    학습/추론이 끝나면 .obj가 저장될 것
     obj_filename = "tada_result.obj"  # TADA 내부에서 이 이름으로 저장한다고 가정
     cmd = [
-        "python", "run.py",
+        "python", "apps/run.py",
         "--config", config_path,
         "--text", text_prompt,
         "--negative", negative_prompt,
